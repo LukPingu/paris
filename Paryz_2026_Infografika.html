@@ -33,12 +33,57 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: #f0f4f8;
     color: var(--black);
     font-size: 13px;
     line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* ── STICKY NAV ──────────────────────────────────────────── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26,39,68,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--gold);
+    display: none; /* ukryta na desktop */
+  }
+
+  .sticky-nav-inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .snav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+
+  .snav-btn:hover { opacity: 0.85; }
+
+  @media (max-width: 768px) {
+    .sticky-nav { display: block; }
   }
 
   /* ── OKŁADKA ─────────────────────────────────────────────── */
@@ -645,6 +690,150 @@
     margin-bottom: 4px;
   }
 
+  /* ── MOBILE FIRST ────────────────────────────────────────── */
+  @media (max-width: 768px) {
+
+    body { font-size: 14px; background: #f0f4f8; }
+
+    /* Okładka */
+    .cover { padding: 36px 20px 32px; min-height: auto; }
+    .cover::before { font-size: 80px; top: -10px; left: -10px; }
+    .cover-deco { display: none; }
+    .cover h1 { font-size: 40px; }
+    .cover-sub { font-size: 14px; margin-bottom: 24px; }
+    .cover-chips { gap: 8px; margin-bottom: 24px; }
+    .cover-chip { font-size: 12px; padding: 6px 12px; }
+    .cover-strip { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    .cover-strip-item { padding: 14px 12px; }
+    .cover-strip-item strong { font-size: 20px; }
+
+    /* Info praktyczne */
+    .practical { padding: 28px 16px; }
+    .practical-grid { grid-template-columns: 1fr; gap: 12px; }
+    .pract-box-body { font-size: 13px; line-height: 1.8; }
+    .pract-box-body li { padding: 5px 0; }
+    .section-title { font-size: 22px; }
+
+    /* Spis treści */
+    .toc { padding: 24px 16px 28px; }
+    .toc-grid { grid-template-columns: 1fr; gap: 8px; }
+    .toc-item { padding: 14px 14px; }
+    .toc-text strong { font-size: 13px; }
+    .toc-text span { font-size: 12px; }
+
+    /* Baner dnia */
+    .day-banner { padding: 20px 16px 18px; }
+    .day-banner-inner { gap: 14px; }
+    .day-num-circle { width: 54px; height: 54px; flex-shrink: 0; }
+    .day-num-circle .num { font-size: 24px; }
+    .day-banner-text .title { font-size: 17px; line-height: 1.25; }
+    .day-banner-text .sub { font-size: 11px; line-height: 1.4; }
+    .day-banner-text .date { font-size: 10px; }
+
+    /* Linki map */
+    .map-links {
+      padding: 10px 16px;
+      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .map-link {
+      font-size: 13px;
+      padding: 10px 16px;
+      width: 100%;
+      justify-content: center;
+      border-radius: 10px;
+      min-height: 44px; /* Touch target */
+    }
+
+    /* Trasa wizualna — przewijalna poziomo na mobile */
+    .route-visual {
+      padding: 16px 16px 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 0;
+    }
+    .route-visual::-webkit-scrollbar { display: none; }
+    .route-stop { flex-shrink: 0; }
+    .route-dot { width: 36px; height: 36px; font-size: 13px; }
+    .route-label { font-size: 9px; max-width: 65px; }
+    .route-line { min-width: 24px; }
+
+    /* Karty miejsc */
+    .places { padding: 10px 12px 0; gap: 12px; }
+    .place-card { border-radius: 14px; }
+    .place-num-bar { width: 40px; font-size: 18px; }
+    .place-head-content { padding: 12px 12px; }
+    .place-time { font-size: 11px; margin-bottom: 3px; }
+    .place-name { font-size: 15px; line-height: 1.25; }
+    .place-cat { font-size: 11px; margin-top: 4px; line-height: 1.4; }
+
+    /* Treść karty — jedna kolumna na mobile */
+    .place-body {
+      padding: 14px 12px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .place-body.full { grid-template-columns: 1fr; }
+    .place-desc { font-size: 13px; line-height: 1.7; }
+
+    /* Ramki z ciekawostkami */
+    .info-box {
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 10px 12px 10px 16px;
+      border-radius: 8px;
+    }
+    .info-box .box-label { font-size: 10px; margin-bottom: 4px; }
+
+    /* Stopka dnia */
+    .day-footer {
+      margin: 14px 12px 0;
+      padding: 12px 14px;
+      font-size: 12px;
+      line-height: 1.55;
+      border-radius: 10px;
+    }
+
+    /* Strona końcowa */
+    .final-page { padding: 40px 20px; min-height: auto; }
+    .final-page::before { font-size: 50px; }
+    .final-title { font-size: 34px; }
+    .final-sub { font-size: 14px; margin-bottom: 28px; }
+    .tips-grid { grid-template-columns: 1fr; gap: 10px; }
+    .tip-item { font-size: 13px; line-height: 1.6; padding: 14px 16px; }
+    .tip-item strong { font-size: 10px; }
+
+    /* Padding dnia na dole */
+    .day-page { padding-bottom: 32px; }
+  }
+
+  /* Bardzo małe ekrany (iPhone SE etc.) */
+  @media (max-width: 380px) {
+    .cover h1 { font-size: 32px; }
+    .cover-strip { grid-template-columns: repeat(2, 1fr); }
+    .day-banner-text .title { font-size: 15px; }
+    .place-name { font-size: 14px; }
+    .map-link { font-size: 12px; }
+    .places { padding: 10px 10px 0; }
+  }
+
+  /* Tablet (768–1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .cover { padding: 50px 40px; }
+    .practical { padding: 40px 40px; }
+    .toc { padding: 30px 40px; }
+    .day-banner { padding: 24px 40px; }
+    .map-links { padding: 12px 40px; }
+    .route-visual { padding: 16px 40px; }
+    .places { padding: 10px 40px 0; }
+    .day-footer { margin: 14px 40px 0; }
+    .place-body { grid-template-columns: 1fr; }
+    .practical-grid { grid-template-columns: 1fr 1fr; }
+    .toc-grid { grid-template-columns: 1fr 1fr; }
+  }
+
   /* ── PRINT ───────────────────────────────────────────────── */
   @media print {
     body { background: white; font-size: 11px; }
@@ -657,7 +846,7 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <!-- ═══════════════════════════════════════════════════════════
      OKŁADKA
@@ -841,8 +1030,20 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════
-     DZIEŃ 1
+     STICKY NAV — widoczna na mobile podczas scrollowania
 ════════════════════════════════════════════════════════════ -->
+<nav class="sticky-nav" id="stickyNav">
+  <div class="sticky-nav-inner">
+    <a href="#day1" class="snav-btn" style="background:var(--navy)">D1</a>
+    <a href="#day2" class="snav-btn" style="background:#1e3a5f">D2</a>
+    <a href="#day3" class="snav-btn" style="background:#4a1942">D3</a>
+    <a href="#day4" class="snav-btn" style="background:#0c4a6e">D4</a>
+    <a href="#day5" class="snav-btn" style="background:#1a3a2a">D5</a>
+    <a href="#day6" class="snav-btn" style="background:var(--pink)">D6</a>
+    <a href="#day7" class="snav-btn" style="background:var(--navy)">D8</a>
+    <a href="#top" class="snav-btn" style="background:var(--gray)">▲</a>
+  </div>
+</nav>
 <div class="day-page" id="day1">
   <div class="day-banner" style="background:var(--navy)">
     <div class="day-banner-inner">
