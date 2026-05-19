@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Les Kurosad à Paris 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #1a2744;
+    --blue:    #2563eb;
+    --lblue:   #dbeafe;
+    --gold:    #d97706;
+    --lgold:   #fef3c7;
+    --green:   #059669;
+    --lgreen:  #d1fae5;
+    --purple:  #7c3aed;
+    --lpurple: #ede9fe;
+    --red:     #dc2626;
+    --lred:    #fee2e2;
+    --orange:  #ea580c;
+    --lorange: #ffedd5;
+    --pink:    #db2777;
+    --lpink:   #fce7f3;
+    --teal:    #0d9488;
+    --lteal:   #ccfbf1;
+    --gray:    #64748b;
+    --lgray:   #e2e8f0;
+    --llgray:  #f8fafc;
+    --black:   #0f172a;
+    --white:   #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f0f4f8;
+    color: var(--black);
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* ── STICKY NAV ──────────────────────────────────────────── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26,39,68,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--gold);
+    display: none; /* ukryta na desktop */
+  }
+
+  .sticky-nav-inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .snav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+
+  .snav-btn:hover { opacity: 0.85; }
+
+  @media (max-width: 768px) {
+    .sticky-nav { display: block; }
+  }
+
+  /* ── OKŁADKA ─────────────────────────────────────────────── */
+  .cover {
+    background: var(--navy);
+    color: white;
+    padding: 60px 80px 50px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    min-height: 400px;
+  }
+
+  .cover::before {
+    content: 'PARIS';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    top: -30px;
+    left: -20px;
+    letter-spacing: -10px;
+    pointer-events: none;
+  }
+
+  .cover-deco {
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    opacity: 0.15;
+  }
+
+  .cover-deco svg { width: 200px; height: 260px; }
+
+  .cover-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .cover h1 span { color: var(--gold); }
+
+  .cover-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .cover-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .cover-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .cover-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    max-width: 600px;
+  }
+
+  .cover-strip-item {
+    background: rgba(255,255,255,0.05);
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .cover-strip-item strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .cover-strip-item span {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── INFO PRAKTYCZNE ─────────────────────────────────────── */
+  .practical {
+    padding: 50px 80px;
+    background: white;
+    page-break-after: always;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .section-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 30px;
+    border-radius: 2px;
+  }
+
+  .practical-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .pract-box {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .pract-box-head {
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .pract-box-body {
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .pract-box-body li {
+    list-style: none;
+    padding: 2px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .pract-box-body li:last-child { border-bottom: none; }
+
+  .pract-box-body li::before {
+    content: '›';
+    margin-right: 6px;
+    font-weight: 700;
+    opacity: 0.5;
+  }
+
+  /* ── SPIS TREŚCI ─────────────────────────────────────────── */
+  .toc {
+    padding: 30px 80px 40px;
+    background: white;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--llgray);
+    border-left: 4px solid;
+    text-decoration: none;
+    color: var(--black);
+    transition: background 0.2s;
+  }
+
+  .toc-item:hover { background: var(--lgray); }
+
+  .toc-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .toc-text strong { display: block; font-size: 12px; font-weight: 600; }
+  .toc-text span { font-size: 11px; color: var(--gray); }
+
+  /* ── DZIEŃ ───────────────────────────────────────────────── */
+  .day-page {
+    padding: 0 0 50px;
+    page-break-before: always;
+  }
+
+  .day-banner {
+    padding: 28px 80px 24px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-banner::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .day-banner::before {
+    content: '';
+    position: absolute;
+    right: 60px;
+    bottom: -60px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .day-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .day-num-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .day-num-circle .label {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1px;
+  }
+
+  .day-num-circle .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .day-banner-text .date {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 4px;
+  }
+
+  .day-banner-text .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .day-banner-text .sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── LINKI MAP ───────────────────────────────────────────── */
+  .map-links {
+    padding: 12px 80px;
+    background: var(--lblue);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgba(37,99,235,0.15);
+  }
+
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: white;
+    border: 1px solid rgba(37,99,235,0.25);
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .map-link:hover {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+  }
+
+  .map-link svg { width: 12px; height: 12px; }
+
+  /* ── TRASA WIZUALNA ──────────────────────────────────────── */
+  .route-visual {
+    padding: 20px 80px 10px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .route-stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .route-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .route-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--gray);
+    text-align: center;
+    max-width: 70px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .route-line {
+    flex: 1;
+    min-width: 20px;
+    height: 2px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--lgray) 0,
+      var(--lgray) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    margin-bottom: 20px;
+  }
+
+  /* ── MIEJSCA ─────────────────────────────────────────────── */
+  .places {
+    padding: 10px 80px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .place-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid var(--lgray);
+  }
+
+  .place-card-head {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border-bottom: 1px solid var(--lgray);
+  }
+
+  .place-num-bar {
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .place-head-content {
+    flex: 1;
+    padding: 10px 14px;
+  }
+
+  .place-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--blue);
+    margin-bottom: 2px;
+  }
+
+  .place-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  .place-cat {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .place-body {
+    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .place-body.full { grid-template-columns: 1fr; }
+
+  .place-desc {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #334155;
+  }
+
+  .place-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-box {
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .info-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .info-box .box-label {
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .box-fact   { background: var(--lpurple); color: #4c1d95; }
+  .box-fact::before { background: var(--purple); }
+
+  .box-tip    { background: var(--lgreen);  color: #065f46; }
+  .box-tip::before  { background: var(--green); }
+
+  .box-warn   { background: var(--lgold);   color: #92400e; }
+  .box-warn::before { background: var(--gold); }
+
+  .box-alert  { background: var(--lred);    color: #991b1b; }
+  .box-alert::before { background: var(--red); }
+
+  .box-info   { background: var(--lblue);   color: #1e40af; }
+  .box-info::before  { background: var(--blue); }
+
+  /* ── STOPKA DNI ──────────────────────────────────────────── */
+  .day-footer {
+    margin: 16px 80px 0;
+    padding: 12px 16px;
+    background: var(--llgray);
+    border-radius: 8px;
+    font-size: 11px;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── STRONA KOŃCOWA ──────────────────────────────────────── */
+  .final-page {
+    padding: 60px 80px;
+    background: var(--navy);
+    color: white;
+    page-break-before: always;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-page::before {
+    content: 'À BIENTÔT';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    bottom: -20px;
+    left: -10px;
+  }
+
+  .final-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .final-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 40px;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 700px;
+  }
+
+  .tip-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .tip-item strong {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  /* ── MOBILE FIRST ────────────────────────────────────────── */
+  @media (max-width: 768px) {
+
+    body { font-size: 14px; background: #f0f4f8; }
+
+    /* Okładka */
+    .cover { padding: 36px 20px 32px; min-height: auto; }
+    .cover::before { font-size: 80px; top: -10px; left: -10px; }
+    .cover-deco { display: none; }
+    .cover h1 { font-size: 40px; }
+    .cover-sub { font-size: 14px; margin-bottom: 24px; }
+    .cover-chips { gap: 8px; margin-bottom: 24px; }
+    .cover-chip { font-size: 12px; padding: 6px 12px; }
+    .cover-strip { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    .cover-strip-item { padding: 14px 12px; }
+    .cover-strip-item strong { font-size: 20px; }
+
+    /* Info praktyczne */
+    .practical { padding: 28px 16px; }
+    .practical-grid { grid-template-columns: 1fr; gap: 12px; }
+    .pract-box-body { font-size: 13px; line-height: 1.8; }
+    .pract-box-body li { padding: 5px 0; }
+    .section-title { font-size: 22px; }
+
+    /* Spis treści */
+    .toc { padding: 24px 16px 28px; }
+    .toc-grid { grid-template-columns: 1fr; gap: 8px; }
+    .toc-item { padding: 14px 14px; }
+    .toc-text strong { font-size: 13px; }
+    .toc-text span { font-size: 12px; }
+
+    /* Baner dnia */
+    .day-banner { padding: 20px 16px 18px; }
+    .day-banner-inner { gap: 14px; }
+    .day-num-circle { width: 54px; height: 54px; flex-shrink: 0; }
+    .day-num-circle .num { font-size: 24px; }
+    .day-banner-text .title { font-size: 17px; line-height: 1.25; }
+    .day-banner-text .sub { font-size: 11px; line-height: 1.4; }
+    .day-banner-text .date { font-size: 10px; }
+
+    /* Linki map */
+    .map-links {
+      padding: 10px 16px;
+      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .map-link {
+      font-size: 13px;
+      padding: 10px 16px;
+      width: 100%;
+      justify-content: center;
+      border-radius: 10px;
+      min-height: 44px; /* Touch target */
+    }
+
+    /* Trasa wizualna — przewijalna poziomo na mobile */
+    .route-visual {
+      padding: 16px 16px 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 0;
+    }
+    .route-visual::-webkit-scrollbar { display: none; }
+    .route-stop { flex-shrink: 0; }
+    .route-dot { width: 36px; height: 36px; font-size: 13px; }
+    .route-label { font-size: 9px; max-width: 65px; }
+    .route-line { min-width: 24px; }
+
+    /* Karty miejsc */
+    .places { padding: 10px 12px 0; gap: 12px; }
+    .place-card { border-radius: 14px; }
+    .place-num-bar { width: 40px; font-size: 18px; }
+    .place-head-content { padding: 12px 12px; }
+    .place-time { font-size: 11px; margin-bottom: 3px; }
+    .place-name { font-size: 15px; line-height: 1.25; }
+    .place-cat { font-size: 11px; margin-top: 4px; line-height: 1.4; }
+
+    /* Treść karty — jedna kolumna na mobile */
+    .place-body {
+      padding: 14px 12px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .place-body.full { grid-template-columns: 1fr; }
+    .place-desc { font-size: 13px; line-height: 1.7; }
+
+    /* Ramki z ciekawostkami */
+    .info-box {
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 10px 12px 10px 16px;
+      border-radius: 8px;
+    }
+    .info-box .box-label { font-size: 10px; margin-bottom: 4px; }
+
+    /* Stopka dnia */
+    .day-footer {
+      margin: 14px 12px 0;
+      padding: 12px 14px;
+      font-size: 12px;
+      line-height: 1.55;
+      border-radius: 10px;
+    }
+
+    /* Strona końcowa */
+    .final-page { padding: 40px 20px; min-height: auto; }
+    .final-page::before { font-size: 50px; }
+    .final-title { font-size: 34px; }
+    .final-sub { font-size: 14px; margin-bottom: 28px; }
+    .tips-grid { grid-template-columns: 1fr; gap: 10px; }
+    .tip-item { font-size: 13px; line-height: 1.6; padding: 14px 16px; }
+    .tip-item strong { font-size: 10px; }
+
+    /* Padding dnia na dole */
+    .day-page { padding-bottom: 32px; }
+  }
+
+  /* Bardzo małe ekrany (iPhone SE etc.) */
+  @media (max-width: 380px) {
+    .cover h1 { font-size: 32px; }
+    .cover-strip { grid-template-columns: repeat(2, 1fr); }
+    .day-banner-text .title { font-size: 15px; }
+    .place-name { font-size: 14px; }
+    .map-link { font-size: 12px; }
+    .places { padding: 10px 10px 0; }
+  }
+
+  /* Tablet (768–1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .cover { padding: 50px 40px; }
+    .practical { padding: 40px 40px; }
+    .toc { padding: 30px 40px; }
+    .day-banner { padding: 24px 40px; }
+    .map-links { padding: 12px 40px; }
+    .route-visual { padding: 16px 40px; }
+    .places { padding: 10px 40px 0; }
+    .day-footer { margin: 14px 40px 0; }
+    .place-body { grid-template-columns: 1fr; }
+    .practical-grid { grid-template-columns: 1fr 1fr; }
+    .toc-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── PRINT ───────────────────────────────────────────────── */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .cover, .practical, .toc, .day-page, .final-page { page-break-after: always; }
+    .place-card { break-inside: avoid; box-shadow: none; }
+    .day-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover, .final-page { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .info-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .place-num-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ═══ EKRAN HASŁA ═══════════════════════════════════════════ -->
+<div id="lockscreen" style="
+  position:fixed; inset:0; z-index:9999;
+  background:var(--navy);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  font-family:'DM Sans',sans-serif;
+">
+  <!-- Dekoracje tła -->
+  <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+    <div style="position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;background:rgba(99,102,241,0.06)"></div>
+    <div style="position:absolute;left:-40px;bottom:-40px;width:200px;height:200px;border-radius:50%;background:rgba(99,102,241,0.05)"></div>
+  </div>
+
+  <!-- Wieża Eiffla SVG -->
+  <svg viewBox="0 0 140 180" width="70" height="90" style="margin-bottom:20px;opacity:0.25">
+    <g fill="#d97706">
+      <polygon points="14,160 47,90 53,90 31,160"/>
+      <polygon points="126,160 109,90 93,90 79,160"/>  <!-- poprawka na symetrię -->
+      <rect x="31" y="140" width="78" height="6" rx="3"/>
+      <polygon points="47,90 53,90 75,55 65,55"/>
+      <polygon points="93,90 109,90 75,55 85,55"/>  <!-- poprawka -->
+      <polygon points="65,55 75,55 72,35 68,35"/>
+      <polygon points="85,55 75,55 72,35 78,35"/>  <!-- poprawka -->
+      <polygon points="68,35 72,35 70,20 70,20"/>
+      <polygon points="72,35 78,35 70,20 70,20"/>  <!-- poprawka -->
+      <rect x="69.5" y="5" width="1" height="16"/>
+    </g>
+  </svg>
+
+  <!-- Tytuł -->
+  <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:white;margin-bottom:4px;letter-spacing:-0.5px;text-align:center">
+    Les Kurosad
+  </div>
+  <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#d97706;margin-bottom:32px;text-align:center">
+    à Paris
+  </div>
+
+  <!-- Formularz hasła -->
+  <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 32px;width:min(340px,90vw);text-align:center">
+    <div style="color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px">Hasło dostępu</div>
+    <input
+      id="pwd"
+      type="password"
+      placeholder="Wpisz hasło..."
+      autocomplete="off"
+      style="
+        width:100%; padding:12px 16px;
+        background:rgba(255,255,255,0.08);
+        border:1px solid rgba(255,255,255,0.15);
+        border-radius:10px; color:white;
+        font-family:'DM Sans',sans-serif;
+        font-size:16px; outline:none;
+        box-sizing:border-box; margin-bottom:12px;
+        text-align:center; letter-spacing:2px;
+      "
+      onkeydown="if(event.key==='Enter')checkPwd()"
+    />
+    <button
+      onclick="checkPwd()"
+      style="
+        width:100%; padding:12px;
+        background:#d97706; border:none;
+        border-radius:10px; color:#1a2744;
+        font-family:'DM Sans',sans-serif;
+        font-size:14px; font-weight:700;
+        cursor:pointer; letter-spacing:0.5px;
+        transition:opacity 0.15s;
+      "
+      onmouseover="this.style.opacity='0.88'"
+      onmouseout="this.style.opacity='1'"
+    >Wejdź →</button>
+    <div id="pwd-err" style="color:#f87171;font-size:12px;margin-top:10px;min-height:18px"></div>
+  </div>
+
+  <div style="color:rgba(255,255,255,0.2);font-size:11px;margin-top:24px">
+    Przewodnik rodzinny · 30 maja – 6 czerwca 2026
+  </div>
+</div>
+
+<script>
+(function(){
+  // Sprawdź czy już odblokowane w tej sesji
+  if(sessionStorage.getItem('kp26')==='ok'){
+    document.getElementById('lockscreen').style.display='none';
+  }
+  setTimeout(function(){
+    var i=document.getElementById('pwd');
+    if(i) i.focus();
+  },300);
+})();
+
+function checkPwd(){
+  var v=document.getElementById('pwd').value;
+  if(v==='Paryż2026'){
+    sessionStorage.setItem('kp26','ok');
+    var ls=document.getElementById('lockscreen');
+    ls.style.transition='opacity 0.4s';
+    ls.style.opacity='0';
+    setTimeout(function(){ls.style.display='none';},400);
+  } else {
+    var err=document.getElementById('pwd-err');
+    err.textContent='Nieprawidłowe hasło. Spróbuj ponownie.';
+    document.getElementById('pwd').value='';
+    document.getElementById('pwd').focus();
+    setTimeout(function(){err.textContent='';},3000);
+  }
+}
+</script>
+
+<!-- ═══ KONIEC EKRANU HASŁA ════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     OKŁADKA
+════════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-deco">
+    <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Wieża Eiffla — sylwetka wektorowa -->
+      <g fill="white">
+        <!-- Podstawa lewa noga -->
+        <polygon points="20,230 65,130 75,130 45,230"/>
+        <!-- Podstawa prawa noga -->
+        <polygon points="180,230 155,130 145,130 135,230"/>
+        <!-- Łuki podstawy -->
+        <rect x="45" y="200" width="110" height="8" rx="4"/>
+        <!-- Środek dolny -->
+        <polygon points="65,130 75,130 108,80 92,80"/>
+        <polygon points="155,130 145,130 108,80 92,80"/>
+        <!-- Środek górny -->
+        <polygon points="92,80 108,80 104,50 96,50"/>
+        <!-- Wierzchołek -->
+        <rect x="99" y="10" width="2" height="42"/>
+        <rect x="96" y="50" width="8" height="6" rx="1"/>
+        <!-- Poziome pasy -->
+        <rect x="55" y="128" width="90" height="5" rx="2" opacity="0.6"/>
+        <rect x="70" y="100" width="60" height="4" rx="2" opacity="0.6"/>
+        <rect x="84" y="78" width="32" height="3" rx="1.5" opacity="0.6"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="cover-tag">Przewodnik Rodzinny · Maj / Czerwiec 2026</div>
+  <h1>Les Kurosad<br><span>à Paris</span></h1>
+  <p class="cover-sub">30 maja – 6 czerwca · Rodzina 2+4 · Marais & Chessy</p>
+
+  <div class="cover-chips">
+    <div class="cover-chip">✈ Lotnisko Orly</div>
+    <div class="cover-chip">🏠 3. dzielnica · Marais</div>
+    <div class="cover-chip">🎟 Wieża Eiffla 31 maja</div>
+    <div class="cover-chip">🏛 Luwr 3 czerwca</div>
+    <div class="cover-chip">🎠 Disneyland 4–5 czerwca</div>
+    <div class="cover-chip">⛪ 3× Eucharystia</div>
+  </div>
+
+  <div class="cover-strip">
+    <div class="cover-strip-item">
+      <strong>7</strong><span>dni</span>
+    </div>
+    <div class="cover-strip-item">
+      <strong>30+</strong><span>miejsc</span>
+    </div>
+    <div class="cover-strip-item">
+      <strong>2</strong><span>parki Disney</span>
+    </div>
+    <div class="cover-strip-item">
+      <strong>~65</strong><span>km pieszo</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INFORMACJE PRAKTYCZNE
+════════════════════════════════════════════════════════════ -->
+<div class="practical">
+  <div class="section-title">Informacje Praktyczne</div>
+  <div class="section-line"></div>
+  <div class="practical-grid">
+
+    <div class="pract-box">
+      <div class="pract-box-head" style="background:var(--red)">🆘 Numery Alarmowe</div>
+      <div class="pract-box-body" style="background:var(--lred)">
+        <ul>
+          <li>Pogotowie (SAMU): <strong>15</strong></li>
+          <li>Policja: <strong>17</strong></li>
+          <li>Straż pożarna: <strong>18</strong></li>
+          <li>Europejski numer alarmowy: <strong>112</strong></li>
+          <li>Ambasada RP w Paryżu: <strong>+33 1 43 17 34 00</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pract-box">
+      <div class="pract-box-head" style="background:var(--blue)">🏠 Zakwaterowanie</div>
+      <div class="pract-box-body" style="background:var(--lblue)">
+        <ul>
+          <li><strong>Mieszkanie 1:</strong> ul. des Gravilliers 63, 75003 Paryż (Marais)</li>
+          <li>30 maja → 3 czerwca (wymeldowanie do 11:00)</li>
+          <li><strong>Mieszkanie 2:</strong> 201 Rue de la Fontaine Rouge, 77700 Chessy</li>
+          <li>3 czerwca wieczorem → 6 czerwca rano</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SPIS TREŚCI
+════════════════════════════════════════════════════════════ -->
+<div class="toc" style="background:white; padding-bottom:40px">
+  <div class="section-title">Plan Podróży</div>
+  <div class="section-line"></div>
+  <div class="toc-grid">
+    <a href="#day1" class="toc-item" style="border-color:var(--navy)">
+      <div class="toc-num" style="background:var(--navy)">1</div>
+      <div class="toc-text"><strong>Sobota, 30 maja</strong><span>Przylot · Marais · Notre-Dame 18:00</span></div>
+    </a>
+    <a href="#day2" class="toc-item" style="border-color:#1e3a5f">
+      <div class="toc-num" style="background:#1e3a5f">2</div>
+      <div class="toc-text"><strong>Niedziela, 31 maja</strong><span>Wieża Eiffla · Arc de Triomphe · Galeries Lafayette</span></div>
+    </a>
+    <a href="#day3" class="toc-item" style="border-color:#4a1942">
+      <div class="toc-num" style="background:#4a1942">3</div>
+      <div class="toc-text"><strong>Poniedziałek, 1 czerwca</strong><span>Montmartre · Moulin Rouge · Sacré-Cœur</span></div>
+    </a>
+    <a href="#day4" class="toc-item" style="border-color:#0c4a6e">
+      <div class="toc-num" style="background:#0c4a6e">4</div>
+      <div class="toc-text"><strong>Wtorek, 2 czerwca</strong><span>Wyspa Cité · Sekwana · Ul. Mouffetard</span></div>
+    </a>
+    <a href="#day5" class="toc-item" style="border-color:#1a3a2a">
+      <div class="toc-num" style="background:#1a3a2a">5</div>
+      <div class="toc-text"><strong>Środa, 3 czerwca</strong><span>Luwr · Wigilia Bożego Ciała · Transfer Chessy</span></div>
+    </a>
+    <a href="#day6" class="toc-item" style="border-color:var(--pink)">
+      <div class="toc-num" style="background:var(--pink)">6–7</div>
+      <div class="toc-text"><strong>4–5 czerwca</strong><span>Disneyland Paris · Boże Ciało</span></div>
+    </a>
+    <a href="#day7" class="toc-item" style="border-color:var(--navy)">
+      <div class="toc-num" style="background:var(--navy)">8</div>
+      <div class="toc-text"><strong>Sobota, 6 czerwca</strong><span>Powrót · Lotnisko Orly · Lot 13:55</span></div>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STICKY NAV — widoczna na mobile podczas scrollowania
+════════════════════════════════════════════════════════════ -->
+<nav class="sticky-nav" id="stickyNav">
+  <div class="sticky-nav-inner">
+    <a href="#day1" class="snav-btn" style="background:var(--navy)">D1</a>
+    <a href="#day2" class="snav-btn" style="background:#1e3a5f">D2</a>
+    <a href="#day3" class="snav-btn" style="background:#4a1942">D3</a>
+    <a href="#day4" class="snav-btn" style="background:#0c4a6e">D4</a>
+    <a href="#day5" class="snav-btn" style="background:#1a3a2a">D5</a>
+    <a href="#day6" class="snav-btn" style="background:var(--pink)">D6</a>
+    <a href="#day7" class="snav-btn" style="background:var(--navy)">D8</a>
+    <a href="#top" class="snav-btn" style="background:var(--gray)">▲</a>
+  </div>
+</nav>
+<div class="day-page" id="day1">
+  <div class="day-banner" style="background:var(--navy)">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">1</div></div>
+      <div class="day-banner-text">
+        <div class="date">SOBOTA, 30 MAJA 2026</div>
+        <div class="title">Przylot · Marais · Notre-Dame</div>
+        <div class="sub">Lotnisko Orly → mieszkanie → wieczorny spacer → Eucharystia 18:00 · ok. 3 km pieszo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-links">
+    <svg style="width:14px;height:14px;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.7262,2.3652/48.864335,2.354565" target="_blank">✈ Orly → Mieszkanie</a>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.864335,2.354565/48.863070,2.361840/48.864020,2.362110/48.852968,2.349902/48.856300,2.347200/48.855611,2.365527/48.864335,2.354565" target="_blank">🗺 Trasa wieczorna: Muzeum → Targ → Notre-Dame → Pl. Wogezów</a>
+  </div>
+
+  <div class="route-visual">
+    <div class="route-stop"><div class="route-dot" style="background:var(--orange)">1</div><div class="route-label">Orly</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--navy)">2</div><div class="route-label">Mieszkanie Marais</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">3</div><div class="route-label">Muz. Karnawaletu</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">4</div><div class="route-label">Targ Czerw. Dzieci</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">5</div><div class="route-label">Notre-Dame ⛪</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--blue)">6</div><div class="route-label">Pl. Wogezów</div></div>
+  </div>
+
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--orange)">1</div>
+        <div class="place-head-content">
+          <div class="place-time">13:20 — Lądowanie</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Aéroport+Paris-Orly" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Lotnisko Paryż-Orly — Transfer Uberem / Boltem do mieszkania</a></div>
+          <div class="place-cat">Transport | Uber XL lub Bolt Van | Cel: 63 Rue des Gravilliers, 75003 Paris | ok. 30–60 min</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Po odbiorze bagaży wyjdź na zewnątrz terminalu i skieruj się do strefy <strong>„VTC / Uber"</strong> — oznaczona osobnymi znakami przy każdym terminalu (nie mylić ze strefą taxi obok). Zamów <strong>Uber XL lub Bolt Van</strong> — kategoria na 6 osób z bagażami.<br><br>
+        Adres docelowy do wpisania w aplikacji:<br>
+        <strong>63 Rue des Gravilliers, 75003 Paris</strong><br><br>
+        Szacunkowy koszt: <strong>45–65 €</strong> za całe auto. Czas jazdy: ok. 30–40 min bez korków — przylot o 13:20, czyli szczyt popołudniowy, licz raczej na 50–60 min.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Orly otwarto w 1961 r. — jest starsze od CDG. Uwaga: Orly i CDG to dwa różne lotniska oddalone o 35 km. Mylenie ich to najczęstszy błąd turystów w drodze powrotnej!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--green)">2</div>
+        <div class="place-head-content">
+          <div class="place-time">15:00–16:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Musée+Carnavalet+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Muzeum Karnawaletu — Historia Paryża</a></div>
+          <div class="place-cat">Muzeum | ul. des Francs-Bourgeois 16 | Wejście BEZPŁATNE | wt–nd 10:00–18:00 | 2 min od mieszkania</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Muzeum historii Paryża w dwóch połączonych renesansowych pałacach — dosłownie 2 minuty od Waszego mieszkania. Ponad 600 000 eksponatów od epoki kamienia po XX w. Piękne dziedzińce, zachowane wnętrza salonów i makiety dawnego Paryża. Idealne na pierwsze godziny po przylocie — klimatyzacja i spokój.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>W jednym z pałaców przez 17 lat mieszkała pisarka Madame de Sévigné (1626–1696). Jej salon jest zrekonstruowany w muzeum. Można też zobaczyć oryginalne klucze do Bastylii — te same, które strażnicy oddali rewolucjonistom 14 lipca 1789 r.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Wejście bezpłatne — idealne na relaks po podróży przed intensywnym wieczorem.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--gold)">3</div>
+        <div class="place-head-content">
+          <div class="place-time">16:00–17:20 — Kolacja</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Marché+des+Enfants+Rouges+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Targ Czerwonych Dzieci — Najstarszy Kryty Targ Paryża</a></div>
+          <div class="place-cat">Jedzenie | ul. de Bretagne 39 | Sobota: 16:00–20:00 | 5 min od mieszkania | od 1615 roku</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Najstarszy kryty targ Paryża działający od 1615 roku. Pod szklanym dachem — stoiska z kuchnią francuską, japońską, marokańską, włoską i libańską. Wspólne drewniane stoły, autentyczna atmosfera paryskiego posiłku. Pierwszy prawdziwie paryski posiłek po przylocie!</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Nazwa pochodzi od pobliskiego sierocińca z XVII w., którego wychowankowie nosili czerwone uniformy. „Dzieci w czerwieni" przychodziły tu po żywność. Targ jest dziś wpisany na listę zabytków Francji.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Przyjedź ok. 16:00 — najlepszy wybór stoisk i mniej tłoku. Niektóre stoiska przyjmują tylko gotówkę.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--purple)">4</div>
+        <div class="place-head-content">
+          <div class="place-time">17:40 kolejka | 18:00 MSZA</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Cathédrale+Notre-Dame+de+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Katedra Notre-Dame de Paris — Eucharystia ⛪</a></div>
+          <div class="place-cat">Msza anticipowana 18:00 | Kolejka wiernych od 17:40 od Portalu Sądu Ostatecznego | Bez rezerwacji</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Katedra Notre-Dame — arcydzieło gotyku budowane 182 lata (1163–1345). Po pożarze 2019 r. i pięciu latach renowacji otworzyła się na nowo w grudniu 2024 r. — w lepszym stanie niż przed pożarem. Wejście na mszę bez rezerwacji, przez osobną kolejkę od Portalu Sądu Ostatecznego.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Wielki dzwon Emmanuel waży 13 ton. Podczas pożaru 2019 r. strażacy stworzyli żywy łańcuch wynosząc Koronę Cierniową Chrystusa — ocalono ją. Słynne „gargulce" to tak naprawdę chimery dodane w XIX w. przez Viollet-le-Duca.</div>
+          <div class="info-box box-warn"><span class="box-label">Plan awaryjny</span>Jeśli kolejka zbyt długa → Kościół Świętego Eustachego, msza 18:30, 15 min pieszo od Notre-Dame.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--blue)">5</div>
+        <div class="place-head-content">
+          <div class="place-time">19:15–21:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.857203,2.348800/48.855611,2.365527" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Wieża Świętego Jakuba i Plac Wogezów</a></div>
+          <div class="place-cat">Wieczorny spacer powrotny | Muzeum Wiktora Hugo: bezpłatne wt–nd 10:00–18:00</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">W drodze powrotnej — gotycka Wieża Świętego Jakuba przy ul. de Rivoli (widok z zewnątrz). Potem Plac Wogezów — najstarszy plac Paryża z 1612 r., otoczony symetrycznymi kamienicami z czerwonej cegły. Wieczorem wygląda magicznie.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Pod numerem 6 na Placu Wogezów przez 16 lat mieszkał Wiktor Hugo i pisał „Nędzników". Dom jest dziś bezpłatnym muzeum. Plac był przez dwa stulecia areną pojedynków arystokratów.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DZIEŃ 2
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day2">
+  <div class="day-banner" style="background:#1e3a5f">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">2</div></div>
+      <div class="day-banner-text">
+        <div class="date">NIEDZIELA, 31 MAJA 2026</div>
+        <div class="title">Wieża Eiffla · Arc de Triomphe · Galeries Lafayette</div>
+        <div class="sub">ok. 13 km | BILET na Wieżę: 12:30 — bądź przy bramce o 12:15!</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/48.864335,2.354565/48.848690,2.307830/48.861689,2.289280/48.858370,2.294481/48.873792,2.295027/48.873622,2.332110/48.871530,2.331710/48.864820,2.336960/48.858342,2.337508/48.864335,2.354565" target="_blank">🗺 Cała trasa 31 maja</a>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.873622,2.332110/48.871530,2.331710/48.864820,2.336960" target="_blank">🗺 Galeries Lafayette → Opera → Pałac Królewski</a>
+  </div>
+  <div class="route-visual">
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">1</div><div class="route-label">Ul. Cler zakupy</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--blue)">2</div><div class="route-label">Trocadéro zdjęcia</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--red)">3</div><div class="route-label">Wieża Eiffla 12:30</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">4</div><div class="route-label">Pole Marsowe piknik</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">5</div><div class="route-label">Łuk Triumfalny</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--blue)">6</div><div class="route-label">Galeries Lafayette</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">7</div><div class="route-label">Opera Garnier</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">8</div><div class="route-label">Pałac Królewski</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--navy)">9</div><div class="route-label">Most Miłości powrót</div></div>
+  </div>
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--green)">1</div>
+        <div class="place-head-content">
+          <div class="place-time">11:00–11:45</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Rue+Cler+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ulica Cler — Zakupy na Piknik</a></div>
+          <div class="place-cat">Autentyczny Paryż | Metro: École Militaire (linia 8) | 10 min od Wieży Eiffla</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Ulica Cler — wzorcowa paryska ulica handlowa, zamknięta dla aut, brukowana. Piekarnie, serowarnie, kwiaciarnie, sklepiki wędliniarskie. Tu eleganccy mieszkańcy tej dzielnicy robią codzienne zakupy. Kup bagietkę, ser i owoce na piknik na Polu Marsowym.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Bagietka ma we Francji oficjalną normę prawną: 250 g, wyłącznie mąka, woda, sól i drożdże. Od 2022 r. tradycja jej wypieku wpisana jest na listę niematerialnego dziedzictwa UNESCO.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Bagietka + camembert + pomidory = idealny piknik za ok. 5–8 €. Kup tu, zjedz na Polu Marsowym po Wieży.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">2–3</div>
+        <div class="place-head-content">
+          <div class="place-time">11:45–14:30 | BILET 12:30!</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.861689,2.289280/48.858370,2.294481" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ogród Trocadéro + Wieża Eiffla</a></div>
+          <div class="place-cat">BILET ZAREZERWOWANY 12:30 | Bądź przy bramce o 12:15! | Champ de Mars, 5 Av. Anatole France</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Trocadéro: najpiękniejszy widok na Wieżę — zdjęcia rodzinne przed wejściem. Wieża Eiffla: schody na 2. piętro (674 stopnie!), winda na szczyt (300 m). Zaplanuj ok. 2 godziny. Gustave Eiffel zbudował ją jako tymczasową konstrukcję na Wystawę 1889 — miała stać 20 lat.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Wieża latem „rośnie" o 15–18 cm z powodu rozszerzalności cieplnej metalu. Jest pomalowana w 3 odcieniach brązu — ciemniejszy u podstawy, jaśniejszy na szczycie. Co wieczór po zmroku błyszczy 20 000 żarówkami przez 5 minut.</div>
+          <div class="info-box box-alert"><span class="box-label">Ważne!</span>Bądź przy bramce o 12:15. Wejście od strony Champ de Mars. Schody na 2. piętro tańsze i bez kolejki.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--gold)">4–5</div>
+        <div class="place-head-content">
+          <div class="place-time">14:30–16:10</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.855300,2.298300/48.873792,2.295027" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Pole Marsowe + Łuk Triumfalny</a></div>
+          <div class="place-cat">Piknik | Metro: Bir-Hakeim → Charles de Gaulle-Étoile | Wejście na taras: ok. 13 €</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Pole Marsowe: piknik z zakupami z ul. Cler, przestrzeń i widok na Wieżę. Łuk Triumfalny: wzniesiony na rozkaz Napoleona 1806 r. (ukończony 1836). Pod łukiem — Grób Nieznanego Żołnierza z wiecznym płomieniem. Na tarasie: panorama 12 alei jednocześnie.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Napoleon nigdy nie przejechał pod łukiem za życia — jego trumna przejechała dopiero w 1840 r., 19 lat po śmierci. Raz w roku słońce zachodzi dokładnie w osi łuku i Pól Elizejskich.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Wejście na taras przez tunel pod placem — nie przechodź przez jezdnię! Panorama 12 alei jedyna w swoim rodzaju.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--blue)">6</div>
+        <div class="place-head-content">
+          <div class="place-time">16:15–17:30</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Galeries+Lafayette+Haussmann+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Galeries Lafayette Haussmann</a></div>
+          <div class="place-cat">Wejście bezpłatne | Taras widokowy bezpłatny | Metro: Havre-Caumartin | Czynne do 20:30</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Trzy obowiązkowe punkty: (1) Kopuła Art Nouveau z 1912 r. — wejdź do głównego budynku i spójrz w górę — 43 m wzwyż, witraże i złocenia. (2) Bezpłatny taras widokowy na dachu — 360°: Wieża Eiffla, Sacré-Cœur, Opera. (3) Smakołyki Lafayette w sąsiednim budynku.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Galeries Lafayette przyjmuje rocznie ponad 30 mln klientów — więcej niż Luwr! W 1919 r. pilot Louis Blériot wykonał lot samolotem wokół kopuły od wewnątrz jako pokaz możliwości lotnictwa.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Taras bezpłatny i bez kolejki. Winda po lewej stronie od głównego wejścia. Czynny do 19:00.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--purple)">7–8</div>
+        <div class="place-head-content">
+          <div class="place-time">17:30–19:15</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.871900,2.331700/48.864820,2.336960" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Opera Garnier + Ogród Pałacu Królewskiego</a></div>
+          <div class="place-cat">Opera: fasada bezpłatna, wnętrze ok. 14 € | Ogród Pałacu: bezpłatny, otwarty całą dobę</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Opera Garnier (3 min od Galeries): fasada w stylu Second Empire robi ogromne wrażenie. Ogród Pałacu Królewskiego: jeden z najpiękniejszych i najspokojniejszych zakątków centrum Paryża — słynne czarno-białe kolumny Burena, arkady ze sklepikami, kawiarnia Le Grand Véfour z 1784 r.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka Opera</span>Pod budynkiem opery jest podziemne jezioro — zbiornik wody dla straży pożarnej. W piwnicach hoduje się ule pszczół produkujące „miód operowy". Opera Garnier to pierwowzór „Upiora w Operze".</div>
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka Ogród</span>W XVIII w. ogród był centrum rozrywki Paryża — hazard i kawiarnie były tu legalne, bo teren był własnością prywatną i policja nie mogła wchodzić. Bywali Voltaire, Rousseau i młody Napoleon.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="day-footer">⭐ Wieczorem: pokaz świetlny Wieży Eiffla — co pełną godzinę po zmroku przez 5 minut. Widok najlepszy z bulwarów nad Sekwaną lub z Pont des Arts.</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DZIEŃ 3
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day3">
+  <div class="day-banner" style="background:#4a1942">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">3</div></div>
+      <div class="day-banner-text">
+        <div class="date">PONIEDZIAŁEK, 1 CZERWCA 2026</div>
+        <div class="title">Montmartre · Moulin Rouge · Sacré-Cœur</div>
+        <div class="sub">ok. 11 km | Metro start: stacja Blanche (linia 2) | Funiculaire akceptuje bilet metra</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/48.864335,2.354565/48.884070,2.332280/48.886370,2.340690/48.884810,2.338350/48.886705,2.343104/48.862100,2.347500/48.860642,2.352110/48.855611,2.365527/48.864335,2.354565" target="_blank">🗺 Cała trasa 1 czerwca</a>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.884070,2.332280/48.886370,2.340690/48.884810,2.338350/48.886705,2.343104" target="_blank">🗺 Moulin Rouge → Montmartre → Sacré-Cœur</a>
+  </div>
+  <div class="route-visual">
+    <div class="route-stop"><div class="route-dot" style="background:var(--red)">1</div><div class="route-label">Moulin Rouge</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">2</div><div class="route-label">Plac Pigalle</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">3</div><div class="route-label">Montmartre</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">4</div><div class="route-label">Winnica + Ściana</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">5</div><div class="route-label">Sacré-Cœur ⛪</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">6</div><div class="route-label">Ul. Montorgueil lunch</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--blue)">7</div><div class="route-label">Pompidou</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">8</div><div class="route-label">Plac Wogezów</div></div>
+  </div>
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">1–2</div>
+        <div class="place-head-content">
+          <div class="place-time">11:00–11:30</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Moulin+Rouge+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Moulin Rouge i Plac Pigalle</a></div>
+          <div class="place-cat">Metro: Blanche (linia 2) | Zdjęcia z zewnątrz | Spacer Bulwarem de Clichy</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Przy placu Blanche — słynny czerwony wiatrak Moulin Rouge, symbol paryskiego kabaretu od 1889 r. Kilka minut na zdjęcia z zewnątrz. Spacer przez Plac Pigalle — w dzień spokojna, kolorowa dzielnica pełna kawiarni.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Tu w 1890 r. zadebiutował taniec can-can. Toulouse-Lautrec był stałym bywalcem i stworzył tu swoje najsłynniejsze plakaty. Edith Piaf śpiewała na ulicach tej dzielnicy jako dziecko.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--gold)">3–4</div>
+        <div class="place-head-content">
+          <div class="place-time">11:30–12:35</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.886370,2.340690/48.884810,2.338350" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Montmartre + Winnica + Ściana „Kocham Cię"</a></div>
+          <div class="place-cat">Funiculaire akceptuje bilet metra | Winnica: ul. Saules | Ściana: Skwer Jehan Rictus, stacja Abbesses</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Wzgórze artystów (130 m n.p.m.) — tu tworzyli Picasso, Modigliani, Renoir. Plac du Tertre z malarzami. Winnica Montmartre — jedyna czynna winnica w centrum Paryża. Ściana „Je t'aime" z napisem „kocham cię" w 250 językach, w tym po polsku!</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka Montmartre</span>W kamienicy przy ul. Ravignan 13 mieszkało jednocześnie kilkudziesięciu przyszłych sławnych artystów. Tu Picasso namalował „Panny z Avignon" (1907) — obraz który zapoczątkował kubizm.</div>
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka Winnica</span>Winnica produkuje rocznie ok. 1500 butelek Pinot Noir. Co październik — Święto Winobrania z paradą w historycznych kostiumach.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--purple)">5</div>
+        <div class="place-head-content">
+          <div class="place-time">12:35–13:30</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Sacré-Cœur+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Bazylika Najświętszego Serca Pańskiego — Sacré-Cœur ⛪</a></div>
+          <div class="place-cat">Wejście BEZPŁATNE | Msze przez cały dzień | Kopuła: ok. 8 €, 300 schodów, widok 360°</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Biała bazylika z trawertynu dominuje nad Paryżem. Budowana od 1875 r., ukończona 1914 r. Panorama ze schodów — jedna z najpiękniejszych w mieście. Msze odprawiane regularnie przez cały dzień.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Trawertyn wydziela pod wpływem deszczu kalcyt który stale wybielania kamień — bazylika jest zawsze śnieżnobiała. Dzwon „Savoyarde" waży 19 ton — jeden z największych na świecie. Przywieziono go 28 końmi przez kilka tygodni.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--gold)">6</div>
+        <div class="place-head-content">
+          <div class="place-time">13:30–15:00 — Lunch</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Rue+Montorgueil+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ulica Montorgueil</a></div>
+          <div class="place-cat">Metro: Les Halles lub Étienne Marcel | 5 min od Pompidou | Brukowana ulica handlowa</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Jedna z najklimatyczniejszych ulic centrum Paryża — brukowana, pełna kawiarni, bistro i piekarni. Tu Paryżanie jedzą lunch na tarasach. Idealna przerwa między Montmartre a Pompidou. Formule lunchu (wejście + danie lub danie + deser) za 14–18 €.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Monet uwiecznił tę ulicę na obrazie „Rue Montorgueil w święto 30 czerwca 1878" — jednym z jego najbarwniejszych płócien, dziś w Musée d'Orsay.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--blue)">7</div>
+        <div class="place-head-content">
+          <div class="place-time">15:00–17:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Centre+Pompidou+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Centrum Pompidou + Fontanna Strawińskiego</a></div>
+          <div class="place-cat">Plac i fontanna: bezpłatne | Muzeum: 15 € (bezpłatne do 18 lat!)</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Centrum Pompidou (1977) — wszystkie instalacje na zewnątrz pomalowane kolorami wg funkcji: niebieski=klimatyzacja, żółty=elektryczność, zielony=woda, czerwony=windy. Fontanna Strawińskiego obok: 16 kolorowych ruchomych rzeźb tryskających wodą.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Paryska prasa przy inauguracji nazywała go „rafinerią ropy". Dziś 8 mln odwiedzin rocznie. Fontanna: każda z 16 rzeźb symbolizuje utwór Strawińskiego — szukaj słonia, czaszki i bochenka chleba.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Muzeum bezpłatne dla osób do 18 lat — koniecznie zabierz dokumenty tożsamości dzieci.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DZIEŃ 4
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day4">
+  <div class="day-banner" style="background:#0c4a6e">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">4</div></div>
+      <div class="day-banner-text">
+        <div class="date">WTOREK, 2 CZERWCA 2026</div>
+        <div class="title">Wyspa Cité · Sekwana · Ul. Mouffetard</div>
+        <div class="sub">ok. 12 km | Trasa w pełni piesza | Sainte-Chapelle: bilet ONLINE koniecznie kupiony wcześniej!</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/48.864335,2.354565/48.852968,2.349902/48.855375,2.344961/48.856697,2.340841/48.846524,2.337366/48.844920,2.351880/48.859961,2.326561/48.858342,2.337508/48.864335,2.354565" target="_blank">🗺 Cała trasa 2 czerwca</a>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.846524,2.337366/48.844920,2.351880/48.859961,2.326561" target="_blank">🗺 Ogród Luksemburski → Mouffetard → d'Orsay</a>
+  </div>
+  <div class="route-visual">
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">1</div><div class="route-label">Notre-Dame zwiedzanie</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">2</div><div class="route-label">Targ Kwiatowy</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--red)">3</div><div class="route-label">Sainte-Chapelle</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">4</div><div class="route-label">Bukinistów + Most Nowy</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">5</div><div class="route-label">Ogród Luksemburski</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">6</div><div class="route-label">Ul. Mouffetard</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">7</div><div class="route-label">Muzeum d'Orsay</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--navy)">8</div><div class="route-label">Powrót + pakowanie</div></div>
+  </div>
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--purple)">1</div>
+        <div class="place-head-content">
+          <div class="place-time">11:00–12:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.852968,2.349902/48.855200,2.347100" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Katedra Notre-Dame — Zwiedzanie + Targ Kwiatowy</a></div>
+          <div class="place-cat">Rezerwacja BEZPŁATNA ale wymagana: notredamedeparis.fr | Targ Kwiatowy: bezpłatny, od 1808 r.</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Notre-Dame po renowacji 2024 — możliwość zwiedzania wnętrza (bezpłatnie, z rezerwacją online). Tuż obok Targ Kwiatowy (Marché aux Fleurs) przy Place Louis-Lépine: setki gatunków kwiatów pod szklanym dachem, piękne kolory i zapachy.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Pod Notre-Dame jest krypta archeologiczna z fundamentami budowli sprzed 2000 lat — Gallo-romańska Lutetia, poprzedniczka Paryża. Bilety ok. 10 €, wejście od placu przed katedrą.</div>
+          <div class="info-box box-alert"><span class="box-label">Ważne!</span>Zrób rezerwację wejścia TERAZ jeśli jeszcze nie — notredamedeparis.fr. Sloty dostępne z kilkudniowym wyprzedzeniem.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">2</div>
+        <div class="place-head-content">
+          <div class="place-time">12:00–13:30</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Sainte-Chapelle+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Kaplica Królewska Sainte-Chapelle</a></div>
+          <div class="place-cat">BILET ONLINE OBOWIĄZKOWO: sainte-chapelle.fr | ok. 13 € | Czynna do 17:00 — nie zostawiaj na koniec!</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Kaplica królewska z 1248 r. — arcydzieło gotyku. 15 witraży o łącznej powierzchni 600 m² pokrywa niemal całe ściany. 1113 scen biblijnych. Przy słońcu wnętrze zamienia się w kalejdoskop kolorów. Absolutny must-see Paryża.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Ludwik IX zapłacił za relikwie Korony Cierniowej 3× więcej niż kosztowała budowa kaplicy — najdroższa transakcja XIII w. Witraże są oryginalne z XIII w. — przeżyły rewolucję bo kaplica służyła jako archiwum sądowe.</div>
+          <div class="info-box box-alert"><span class="box-label">Ważne!</span>Bez biletu online kolejka = 2–3 godziny. Czynna tylko do 17:00!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--green)">3–4</div>
+        <div class="place-head-content">
+          <div class="place-time">13:30–15:30</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.856697,2.340841/48.846524,2.337366" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Bukinistów + Most Nowy + Ogród Luksemburski</a></div>
+          <div class="place-cat">Bukinistów: bezpłatni, UNESCO 2024 | Most Nowy: 1607 r. | Ogród: bezpłatny, żaglówki na basenie ok. 3 €</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Bukinistów: zielone skrzynki z używanymi książkami, pocztówkami i plakatami wzdłuż Sekwany — symbol Paryża od XVI w., wpisani na listę UNESCO 2024. Most Nowy (Pont Neuf) — najstarszy most Paryża (1607 r.). Ogród Luksemburski: miniaturowe żaglówki na basenie — tradycja od 100 lat.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Hemingway pisał, że w czasach biedy przychodził do Ogrodu Luksemburskiego łapać gołębie na kolację. Ogród zaprojektował André Le Nôtre — ten sam co Wersal. Pod numerem 53 ul. Mouffetard w 1938 r. odkryto 3351 złotych monet Ludwika XV ukrytych w ścianie.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Stare pocztówki paryskie u bukinistów: 50 centów–2 €. Idealna pamiątka. Możesz się targować!</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="day-footer">⚠️ Muzeum d'Orsay zamknięte we wtorki — tylko fasada i Most Miłości w drodze powrotnej. Wieczorem: spakuj się — jutro wymeldowanie do 11:00 i przeprowadzka do Chessy.</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DZIEŃ 5
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day5">
+  <div class="day-banner" style="background:#1a3a2a">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">5</div></div>
+      <div class="day-banner-text">
+        <div class="date">ŚRODA, 3 CZERWCA 2026</div>
+        <div class="title">Luwr · Wigilia Bożego Ciała · Transfer do Chessy</div>
+        <div class="sub">ok. 4 km | BILET LUWR 12:00 | Wymeldowanie do 11:00 | City-Locker (82 Rue des Gravilliers) | Msza 18:00</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/48.864335,2.354565/48.864820,2.336960/48.862820,2.339760/48.860611,2.337644/48.863700,2.330000/48.863390,2.345121/48.859700,2.347600" target="_blank">🗺 Trasa: City-Locker → Pałac Królewski → Luwr → Tuileries → Kościół → Châtelet</a>
+    <a class="map-link" href="https://www.google.com/maps/search/82+Rue+des+Gravilliers+75003+Paris" target="_blank">📦 City-Locker — 82 Rue des Gravilliers</a>
+    <a class="map-link" href="https://www.google.com/maps/dir/48.859700,2.347600/48.868500,2.782800" target="_blank">🚇 Châtelet → Chessy (RER A, 40 min)</a>
+  </div>
+  <div class="route-visual">
+    <div class="route-stop"><div class="route-dot" style="background:var(--orange)">0</div><div class="route-label">Wymeldowanie</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">📦</div><div class="route-label">City-Locker bagaże</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">1</div><div class="route-label">Ogród Pałacu Król.</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">2</div><div class="route-label">Fontanna Niewinątek</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--red)">3</div><div class="route-label">LUWR 12:00</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--green)">4</div><div class="route-label">Tuileries odpoczynek</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--purple)">5</div><div class="route-label">Kościół Eustachego 18:00</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--gold)">📦</div><div class="route-label">Odbiór bagaży</div></div>
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot" style="background:var(--orange)">6</div><div class="route-label">RER A → Chessy</div></div>
+  </div>
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--gold)">0</div>
+        <div class="place-head-content">
+          <div class="place-time">do 11:00 — po wymeldowaniu</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/82+Rue+des+Gravilliers+75003+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">City-Locker — Zostawienie bagażu 📦</a></div>
+          <div class="place-cat">82 Rue des Gravilliers, 75003 Paris | 2 min pieszo od mieszkania | Odbiór wieczorem przed RER</div>
+        </div>
+      </div>
+      <div class="place-body full">
+        <div class="place-desc">Po wymeldowaniu z mieszkania (do 11:00) idź bezpośrednio do przechowalni — dosłownie 2 minuty pieszo.<br><br>
+        📍 <strong>Adres:</strong> 82 Rue des Gravilliers, 75003 Paris<br>
+        📅 <strong>Data:</strong> 03.06.2026<br>
+        🔑 <strong>Kod do drzwi:</strong> <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace">*180967#</code><br>
+        🗄️ <strong>Szafka nr 01</strong> &nbsp;·&nbsp; <strong>Kod:</strong> <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace">253476</code><br><br>
+        Bagaże zostawiasz rano, <strong>odbierasz wieczorem po mszy</strong> (ok. 19:15) — przed wyjazdem RER A do Chessy z Châtelet-Les Halles.</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--green)">1–2</div>
+        <div class="place-head-content">
+          <div class="place-time">11:00–12:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.864820,2.336960/48.862820,2.339760" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ogród Pałacu Królewskiego + Fontanna Niewiniątek</a></div>
+          <div class="place-cat">Oba miejsca bezpłatne | Ogród: 2 min od Luwru | Fontanna: Plac des Innocents (5 min spacerem)</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Ogród Pałacu Królewskiego: spokojny ogród z czarno-białymi kolumnami Burena — jeden z najpiękniejszych zakątków centrum, prawie nieznany turystom. Fontanna Niewiniątek: najstarsza fontanna Paryża z 1549 r., piękna renesansowa rzeźba Jeana Goujona.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Kolumny Burena wywołały przy inauguracji taki skandal, że minister kultury dostał list podpisany przez tysiąc oburzonych paryżan. Dziś to ikona. Fontanna stała pierwotnie przy największym cmentarzu Paryża (20 pokoleń na 2 ha) — rozebranym po Rewolucji, szczątki przeniesiono do Katakumb.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">3</div>
+        <div class="place-head-content">
+          <div class="place-time">12:00–15:30 | BILET!</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Musée+du+Louvre+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Luwr</a></div>
+          <div class="place-cat">BILET ZAREZERWOWANY 12:00 | Wejście od strony metra Palais-Royal (mniej tłumu niż przy Piramidzie!)</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Największe muzeum na świecie — 73 000 dzieł sztuki na 60 000 m². Priorytety: Mona Lisa (sala 711, skrzydło Denon), Nike z Samotraki (główne schody), Wenus z Milo (skrzydło Sully), mumie egipskie i Wielki Sfinks (sale 321–322 i 338). Zacznij od mumii — gwarancja zachwytu.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Gdybyś spędził przy każdym eksponacie 30 sekund, zwiedzając 8 h dziennie — potrzebowałbyś 3 miesięcy. Mona Lisa jest mała: 77×53 cm. Piramida Luwru ma 673 szklane panele — legenda mówi „666 (liczba bestii)" i żyje mimo że to nieprawda.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Wejdź od strony ul. de Rivoli / metra Palais-Royal — o wiele krótsza kolejka. Zacznij od Egiptu — gwarancja zachwytu od pierwszych minut.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--purple)">4</div>
+        <div class="place-head-content">
+          <div class="place-time">17:30–19:00 | MSZA 18:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Église+Saint-Eustache+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Kościół Świętego Eustachego — Wigilia Bożego Ciała ⛪</a></div>
+          <div class="place-cat">2 minuty pieszo od Luwru | Zaułek Świętego Eustachego | saint-eustache.org | Msza 18:00</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Jeden z największych i najpiękniejszych kościołów Paryża, budowany 100 lat (1532–1637). Gotycka struktura z renesansową dekoracją. Dwa ogromne organy (8000 piszczałek). Msza wieczorna o 18:00. 3 czerwca to Wigilia Bożego Ciała — wyjątkowe nabożeństwo liturgiczne.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Tu chrzczono Moliera, odprawiano pogrzeby Colberta i markizy de Pompadour. Franz Liszt dyrygował tu premierą swojej Mszy Gran w 1866 r. Co niedzielę o 17:30 — bezpłatne koncerty organowe.</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Kościół 2 minuty pieszo od Luwru — idealne zakończenie dnia przed transferem.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="day-footer">📦 Po mszy (ok. 19:15): wróć do City-Locker (82 Rue des Gravilliers) — kod drzwi <strong>*180967#</strong>, szafka 01, kod <strong>253476</strong>. Następnie RER A z Châtelet-Les Halles → Marne-la-Vallée/Chessy, ok. 40 min. Bilet strefy 5 — kupuj oddzielnie!</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DISNEYLAND
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day6">
+  <div class="day-banner" style="background:var(--pink)">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dni</div><div class="num">6–7</div></div>
+      <div class="day-banner-text">
+        <div class="date">CZWARTEK–PIĄTEK, 4–5 CZERWCA 2026</div>
+        <div class="title">Disneyland Paris — Dwa Dni Magii!</div>
+        <div class="sub">Chessy | Bilety wykupione | Boże Ciało 4 czerwca (msza poranna) | Aplikacja: Disneyland Paris</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/48.868500,2.782800/48.872000,2.779000" target="_blank">🗺 Hotel Chessy → Disneyland Paris</a>
+  </div>
+  <div class="places">
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--pink)">1</div>
+        <div class="place-head-content">
+          <div class="place-time">Czwartek 4 czerwca od 10:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Disneyland+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Disneyland Park — Dzień 1</a></div>
+          <div class="place-cat">BILETY WYKUPIONE | Zamek Śpiącej Królewny · Grzmocąca Góra · Piraci z Karaibów · Kraina Fantazji</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Zamek Śpiącej Królewny — jedyny zamek Disneya na świecie do którego można wejść i zobaczyć smoka w lochach! Frontierland: Grzmocąca Góra i Uwiedziony Dwór. Adventureland: Piraci z Karaibów. Discoveryland: Kosmiczna Góra. Wieczorem: parada + pokaz świateł na zamku.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Pod parkiem biegają tunele dla pracowników — postacie Disneya nigdy nie mogą się „spotkać" ze sobą na oczach gości. Rekord kolejki do Grzmocącej Góry: 3,5 godziny!</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Premier Access (płatny skip the line) do Grzmocącej Góry i Space Mountain: kup w aplikacji zaraz po wejściu do parku — sprzedaje się błyskawicznie, oszczędzasz 1–2 godziny.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">2</div>
+        <div class="place-head-content">
+          <div class="place-time">Piątek 5 czerwca od 10:00</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Walt+Disney+Studios+Park+Chessy" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Walt Disney Studios — Dzień 2</a></div>
+          <div class="place-cat">BILETY WYKUPIONE | Kampus Avengers · Ratatouille · Cars | Lub powrót do ulubionych z Dnia 1</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Walt Disney Studios: Kampus Avengers — strefa Marvela. Ratatouille: The Adventure — przygoda z Remym w miniaturowych dekoracjach, absolutny hit! Cars Quatre Roues Rallye. Crush's Coaster. Alternatywnie: powrót do ulubionych atrakcji Dnia 1.</div>
+        <div class="place-boxes">
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka</span>Atrakcja Ratatouille jest tak popularna, że jej Premier Access sprzedaje się w pierwszych minutach po otwarciu parku. Wejdź przed 10:15 i stań w kolejce od razu!</div>
+          <div class="info-box box-tip"><span class="box-label">Wskazówka</span>Aplikacja Disneyland Paris: pobierz przed wyjazdem, zaloguj się i sparuj bilety. Pokazuje kolejki na żywo — atakuj atrakcje gdy kolejka spada poniżej 20 min.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     POWRÓT
+════════════════════════════════════════════════════════════ -->
+<div class="day-page" id="day7">
+  <div class="day-banner" style="background:var(--navy)">
+    <div class="day-banner-inner">
+      <div class="day-num-circle"><div class="label">Dzień</div><div class="num">8</div></div>
+      <div class="day-banner-text">
+        <div class="date">SOBOTA, 6 CZERWCA 2026</div>
+        <div class="title">Powrót do Domu</div>
+        <div class="sub">LOT 13:55 z Lotniska Paryż-Orly | Bądź na lotnisku do 11:55 | Wyjedź z hotelu przed 9:00!</div>
+      </div>
+    </div>
+  </div>
+  <div class="map-links">
+    <a class="map-link" href="https://www.google.com/maps/dir/201+Rue+de+la+Fontaine+Rouge,+77700+Chessy/A%C3%A9roport+Paris-Orly,+Orly" target="_blank">🚗 Chessy → Orly — trasa dla kierowcy (Uber/Bolt)</a>
+    <a class="map-link" href="https://www.google.com/maps/search/Aéroport+Paris-Orly" target="_blank">✈ Lotnisko Paryż-Orly — mapa</a>
+  </div>
+  <div class="places">
+    <div class="place-card">
+      <div class="place-card-head">
+        <div class="place-num-bar" style="background:var(--red)">!</div>
+        <div class="place-head-content">
+          <div class="place-time">9:00 — Wyjazd | 13:55 — Lot</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/201+Rue+de+la+Fontaine+Rouge+77700+Chessy/Aéroport+Paris-Orly" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Transfer Chessy → Lotnisko Paryż-Orly — Uber XL / Bolt Van</a></div>
+          <div class="place-cat">UWAGA: Orly ≠ CDG — to dwa różne lotniska! | Bądź na Orly do 11:55 | LOT 13:55</div>
+        </div>
+      </div>
+      <div class="place-body">
+        <div class="place-desc">Zarezerwuj <strong>Uber XL lub Bolt Van</strong> na <strong>6 osób z bagażami wieczorem 5 czerwca</strong> — obie aplikacje mają opcję rezerwacji na konkretną godzinę z wyprzedzeniem.<br><br>
+        Adres startowy (wpisz w aplikacji):<br>
+        <strong>201 Rue de la Fontaine Rouge, 77700 Chessy</strong><br><br>
+        Adres docelowy:<br>
+        <strong>Aéroport Paris-Orly</strong> — wybierz właściwy terminal zgodnie z kartą pokładową.<br><br>
+        Zamów na godz. <strong>9:00</strong>. Szacunkowy koszt: <strong>65–90 €</strong> za całe auto. Czas jazdy: ok. 50–60 min (trasa ok. 50 km).</div>
+        <div class="place-boxes">
+          <div class="info-box box-alert"><span class="box-label">Ważne!</span>Orly i CDG to dwa różne lotniska oddalone o 35 km — upewnij się że podajesz w aplikacji Orly, nie CDG! Zarezerwuj vana dzień wcześniej — rano w sobotę może być mało dostępnych kierowców.</div>
+          <div class="info-box box-fact"><span class="box-label">Ciekawostka na koniec</span>Paryż i Polska mają głęboką historyczną więź. Tu mieszkali Chopin, Mickiewicz, Słowacki i Maria Curie-Skłodowska. Hôtel Lambert na Wyspie Świętego Ludwika (którą mijaliście 31 maja!) był przez 150 lat centrum polskiej emigracji politycznej.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STRONA KOŃCOWA
+════════════════════════════════════════════════════════════ -->
+<div class="final-page">
+  <div class="final-title">Bon Voyage!</div>
+  <p class="final-sub">Życzymy cudownych wakacji w Paryżu — mieście świateł, smaków i historii.</p>
+  <div class="tips-grid">
+    <div class="tip-item"><strong>Każde rano</strong>Zacznij od świeżego croissanta z pobliskiej boulangerie — to rytuał który nastraja na właściwy ton dnia.</div>
+    <div class="tip-item"><strong>Zdjęcia Wieży Eiffla</strong>Najpiękniejsze o zmroku, z bulwarów nad Sekwaną lub z ogrodu Trocadéro. Pokaz świetlny co pełną godzinę po zmroku.</div>
+    <div class="tip-item"><strong>Muzea i bilety</strong>Muzea bezpłatne dla osób do 18 lat — zawsze miej dokumenty tożsamości dzieci przy sobie.</div>
+    <div class="tip-item"><strong>Po francusku</strong>Kilka słów robi ogromną różnicę — Paryżanie to doceniają. Zacznij od „Bonjour" i „Merci".</div>
+    <div class="tip-item"><strong>Kieszonkowcy</strong>Aktywni przy Wieży Eiffla i w metrze — trzymaj portfel i telefon w przedniej kieszeni lub torbie z zamkiem.</div>
+    <div class="tip-item"><strong>Tempo</strong>Paryż to miasto dla pieszych. Najlepsze odkrycia czekają w bocznych uliczkach — nie spiesz się.</div>
+  </div>
+</div>
+
+</body>
+</html>
