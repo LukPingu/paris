@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paryż 2026 — Rodzinny Plan Zwiedzania</title>
+<title>Les Kurosad à Paris 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -848,6 +848,118 @@
 </head>
 <body id="top">
 
+<!-- ═══ EKRAN HASŁA ═══════════════════════════════════════════ -->
+<div id="lockscreen" style="
+  position:fixed; inset:0; z-index:9999;
+  background:var(--navy);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  font-family:'DM Sans',sans-serif;
+">
+  <!-- Dekoracje tła -->
+  <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+    <div style="position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;background:rgba(99,102,241,0.06)"></div>
+    <div style="position:absolute;left:-40px;bottom:-40px;width:200px;height:200px;border-radius:50%;background:rgba(99,102,241,0.05)"></div>
+  </div>
+
+  <!-- Wieża Eiffla SVG -->
+  <svg viewBox="0 0 140 180" width="70" height="90" style="margin-bottom:20px;opacity:0.25">
+    <g fill="#d97706">
+      <polygon points="14,160 47,90 53,90 31,160"/>
+      <polygon points="126,160 109,90 93,90 79,160"/>  <!-- poprawka na symetrię -->
+      <rect x="31" y="140" width="78" height="6" rx="3"/>
+      <polygon points="47,90 53,90 75,55 65,55"/>
+      <polygon points="93,90 109,90 75,55 85,55"/>  <!-- poprawka -->
+      <polygon points="65,55 75,55 72,35 68,35"/>
+      <polygon points="85,55 75,55 72,35 78,35"/>  <!-- poprawka -->
+      <polygon points="68,35 72,35 70,20 70,20"/>
+      <polygon points="72,35 78,35 70,20 70,20"/>  <!-- poprawka -->
+      <rect x="69.5" y="5" width="1" height="16"/>
+    </g>
+  </svg>
+
+  <!-- Tytuł -->
+  <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:white;margin-bottom:4px;letter-spacing:-0.5px;text-align:center">
+    Les Kurosad
+  </div>
+  <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#d97706;margin-bottom:32px;text-align:center">
+    à Paris
+  </div>
+
+  <!-- Formularz hasła -->
+  <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 32px;width:min(340px,90vw);text-align:center">
+    <div style="color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px">Hasło dostępu</div>
+    <input
+      id="pwd"
+      type="password"
+      placeholder="Wpisz hasło..."
+      autocomplete="off"
+      style="
+        width:100%; padding:12px 16px;
+        background:rgba(255,255,255,0.08);
+        border:1px solid rgba(255,255,255,0.15);
+        border-radius:10px; color:white;
+        font-family:'DM Sans',sans-serif;
+        font-size:16px; outline:none;
+        box-sizing:border-box; margin-bottom:12px;
+        text-align:center; letter-spacing:2px;
+      "
+      onkeydown="if(event.key==='Enter')checkPwd()"
+    />
+    <button
+      onclick="checkPwd()"
+      style="
+        width:100%; padding:12px;
+        background:#d97706; border:none;
+        border-radius:10px; color:#1a2744;
+        font-family:'DM Sans',sans-serif;
+        font-size:14px; font-weight:700;
+        cursor:pointer; letter-spacing:0.5px;
+        transition:opacity 0.15s;
+      "
+      onmouseover="this.style.opacity='0.88'"
+      onmouseout="this.style.opacity='1'"
+    >Wejdź →</button>
+    <div id="pwd-err" style="color:#f87171;font-size:12px;margin-top:10px;min-height:18px"></div>
+  </div>
+
+  <div style="color:rgba(255,255,255,0.2);font-size:11px;margin-top:24px">
+    Przewodnik rodzinny · 30 maja – 6 czerwca 2026
+  </div>
+</div>
+
+<script>
+(function(){
+  // Sprawdź czy już odblokowane w tej sesji
+  if(sessionStorage.getItem('kp26')==='ok'){
+    document.getElementById('lockscreen').style.display='none';
+  }
+  setTimeout(function(){
+    var i=document.getElementById('pwd');
+    if(i) i.focus();
+  },300);
+})();
+
+function checkPwd(){
+  var v=document.getElementById('pwd').value;
+  if(v==='Paryż2026'){
+    sessionStorage.setItem('kp26','ok');
+    var ls=document.getElementById('lockscreen');
+    ls.style.transition='opacity 0.4s';
+    ls.style.opacity='0';
+    setTimeout(function(){ls.style.display='none';},400);
+  } else {
+    var err=document.getElementById('pwd-err');
+    err.textContent='Nieprawidłowe hasło. Spróbuj ponownie.';
+    document.getElementById('pwd').value='';
+    document.getElementById('pwd').focus();
+    setTimeout(function(){err.textContent='';},3000);
+  }
+}
+</script>
+
+<!-- ═══ KONIEC EKRANU HASŁA ════════════════════════════════════ -->
+
 <!-- ═══════════════════════════════════════════════════════════
      OKŁADKA
 ════════════════════════════════════════════════════════════ -->
@@ -878,8 +990,8 @@
     </svg>
   </div>
 
-  <div class="cover-tag">Rodzinny Plan Zwiedzania 2026</div>
-  <h1>Paryż<br><span>Miasto Świateł</span></h1>
+  <div class="cover-tag">Przewodnik Rodzinny · Maj / Czerwiec 2026</div>
+  <h1>Les Kurosad<br><span>à Paris</span></h1>
   <p class="cover-sub">30 maja – 6 czerwca · Rodzina 2+4 · Marais & Chessy</p>
 
   <div class="cover-chips">
@@ -936,54 +1048,6 @@
           <li>30 maja → 3 czerwca (wymeldowanie do 11:00)</li>
           <li><strong>Mieszkanie 2:</strong> 201 Rue de la Fontaine Rouge, 77700 Chessy</li>
           <li>3 czerwca wieczorem → 6 czerwca rano</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="pract-box">
-      <div class="pract-box-head" style="background:var(--green)">🚇 Transport</div>
-      <div class="pract-box-body" style="background:var(--lgreen)">
-        <ul>
-          <li>Bilet Métro-Train-RER: <strong>2,55 €</strong> / przejazd (od 2026)</li>
-          <li>Navigo Liberté+: karta wielorazowa, ładuj ile chcesz</li>
-          <li><strong>Chessy (RER A, strefa 5):</strong> ok. 8 € / osobę — kupuj oddzielnie!</li>
-          <li><strong>Lotnisko Orly:</strong> Uber XL / Bolt Van — rezerwuj z wyprzedzeniem</li>
-          <li>Metro: pon–czw 5:30–1:15, pt–sob do 2:15</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="pract-box">
-      <div class="pract-box-head" style="background:var(--purple)">🌐 Kluczowe Strony</div>
-      <div class="pract-box-body" style="background:var(--lpurple)">
-        <ul>
-          <li>Notre-Dame: <strong>notredamedeparis.fr</strong> (rezerwacja bezpłatna)</li>
-          <li>Sainte-Chapelle: <strong>sainte-chapelle.fr</strong> (bilet online!)</li>
-          <li>Luwr: <strong>louvre.fr</strong> — masz bilet 3 czerwca 12:00</li>
-          <li>Wieża Eiffla: <strong>toureiffel.paris</strong> — masz bilet 31 maja 12:30</li>
-          <li>Disneyland: <strong>disneylandparis.com</strong> + aplikacja mobilna</li>
-          <li>Msze Chessy: <strong>messes.info</strong> → „Chessy 77700"</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="pract-box" style="grid-column: 1 / -1">
-      <div class="pract-box-head" style="background:var(--teal)">🗣 Kilka Słów po Francusku</div>
-      <div class="pract-box-body" style="background:var(--lteal); display:grid; grid-template-columns: repeat(3,1fr); gap: 0 20px">
-        <ul>
-          <li>Bonjour [bonżur] — dzień dobry</li>
-          <li>Merci [mersi] — dziękuję</li>
-          <li>S'il vous plaît [siwuPlε] — proszę</li>
-        </ul>
-        <ul>
-          <li>Excusez-moi [εkskyzε mwa] — przepraszam</li>
-          <li>Où est...? [u ε] — gdzie jest...?</li>
-          <li>Combien? [kɔ̃bjɛ̃] — ile kosztuje?</li>
-        </ul>
-        <ul>
-          <li>L'addition [ladisjɔ̃] — rachunek proszę</li>
-          <li>Je ne comprends pas — nie rozumiem</li>
-          <li>Parlez-vous anglais? — po angielsku?</li>
         </ul>
       </div>
     </div>
@@ -1083,7 +1147,7 @@
         <div class="place-num-bar" style="background:var(--orange)">1</div>
         <div class="place-head-content">
           <div class="place-time">13:20 — Lądowanie</div>
-          <div class="place-name">Lotnisko Paryż-Orly — Transfer Uberem / Boltem do mieszkania</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Aéroport+Paris-Orly" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Lotnisko Paryż-Orly — Transfer Uberem / Boltem do mieszkania</a></div>
           <div class="place-cat">Transport | Uber XL lub Bolt Van | Cel: 63 Rue des Gravilliers, 75003 Paris | ok. 30–60 min</div>
         </div>
       </div>
@@ -1103,7 +1167,7 @@
         <div class="place-num-bar" style="background:var(--green)">2</div>
         <div class="place-head-content">
           <div class="place-time">15:00–16:00</div>
-          <div class="place-name">Muzeum Karnawaletu — Historia Paryża</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Musée+Carnavalet+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Muzeum Karnawaletu — Historia Paryża</a></div>
           <div class="place-cat">Muzeum | ul. des Francs-Bourgeois 16 | Wejście BEZPŁATNE | wt–nd 10:00–18:00 | 2 min od mieszkania</div>
         </div>
       </div>
@@ -1121,7 +1185,7 @@
         <div class="place-num-bar" style="background:var(--gold)">3</div>
         <div class="place-head-content">
           <div class="place-time">16:00–17:20 — Kolacja</div>
-          <div class="place-name">Targ Czerwonych Dzieci — Najstarszy Kryty Targ Paryża</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Marché+des+Enfants+Rouges+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Targ Czerwonych Dzieci — Najstarszy Kryty Targ Paryża</a></div>
           <div class="place-cat">Jedzenie | ul. de Bretagne 39 | Sobota: 16:00–20:00 | 5 min od mieszkania | od 1615 roku</div>
         </div>
       </div>
@@ -1139,7 +1203,7 @@
         <div class="place-num-bar" style="background:var(--purple)">4</div>
         <div class="place-head-content">
           <div class="place-time">17:40 kolejka | 18:00 MSZA</div>
-          <div class="place-name">Katedra Notre-Dame de Paris — Eucharystia ⛪</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Cathédrale+Notre-Dame+de+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Katedra Notre-Dame de Paris — Eucharystia ⛪</a></div>
           <div class="place-cat">Msza anticipowana 18:00 | Kolejka wiernych od 17:40 od Portalu Sądu Ostatecznego | Bez rezerwacji</div>
         </div>
       </div>
@@ -1157,7 +1221,7 @@
         <div class="place-num-bar" style="background:var(--blue)">5</div>
         <div class="place-head-content">
           <div class="place-time">19:15–21:00</div>
-          <div class="place-name">Wieża Świętego Jakuba i Plac Wogezów</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.857203,2.348800/48.855611,2.365527" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Wieża Świętego Jakuba i Plac Wogezów</a></div>
           <div class="place-cat">Wieczorny spacer powrotny | Muzeum Wiktora Hugo: bezpłatne wt–nd 10:00–18:00</div>
         </div>
       </div>
@@ -1216,7 +1280,7 @@
         <div class="place-num-bar" style="background:var(--green)">1</div>
         <div class="place-head-content">
           <div class="place-time">11:00–11:45</div>
-          <div class="place-name">Ulica Cler — Zakupy na Piknik</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Rue+Cler+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ulica Cler — Zakupy na Piknik</a></div>
           <div class="place-cat">Autentyczny Paryż | Metro: École Militaire (linia 8) | 10 min od Wieży Eiffla</div>
         </div>
       </div>
@@ -1234,7 +1298,7 @@
         <div class="place-num-bar" style="background:var(--red)">2–3</div>
         <div class="place-head-content">
           <div class="place-time">11:45–14:30 | BILET 12:30!</div>
-          <div class="place-name">Ogród Trocadéro + Wieża Eiffla</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.861689,2.289280/48.858370,2.294481" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ogród Trocadéro + Wieża Eiffla</a></div>
           <div class="place-cat">BILET ZAREZERWOWANY 12:30 | Bądź przy bramce o 12:15! | Champ de Mars, 5 Av. Anatole France</div>
         </div>
       </div>
@@ -1252,7 +1316,7 @@
         <div class="place-num-bar" style="background:var(--gold)">4–5</div>
         <div class="place-head-content">
           <div class="place-time">14:30–16:10</div>
-          <div class="place-name">Pole Marsowe + Łuk Triumfalny</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.855300,2.298300/48.873792,2.295027" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Pole Marsowe + Łuk Triumfalny</a></div>
           <div class="place-cat">Piknik | Metro: Bir-Hakeim → Charles de Gaulle-Étoile | Wejście na taras: ok. 13 €</div>
         </div>
       </div>
@@ -1270,7 +1334,7 @@
         <div class="place-num-bar" style="background:var(--blue)">6</div>
         <div class="place-head-content">
           <div class="place-time">16:15–17:30</div>
-          <div class="place-name">Galeries Lafayette Haussmann</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Galeries+Lafayette+Haussmann+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Galeries Lafayette Haussmann</a></div>
           <div class="place-cat">Wejście bezpłatne | Taras widokowy bezpłatny | Metro: Havre-Caumartin | Czynne do 20:30</div>
         </div>
       </div>
@@ -1288,7 +1352,7 @@
         <div class="place-num-bar" style="background:var(--purple)">7–8</div>
         <div class="place-head-content">
           <div class="place-time">17:30–19:15</div>
-          <div class="place-name">Opera Garnier + Ogród Pałacu Królewskiego</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.871900,2.331700/48.864820,2.336960" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Opera Garnier + Ogród Pałacu Królewskiego</a></div>
           <div class="place-cat">Opera: fasada bezpłatna, wnętrze ok. 14 € | Ogród Pałacu: bezpłatny, otwarty całą dobę</div>
         </div>
       </div>
@@ -1347,7 +1411,7 @@
         <div class="place-num-bar" style="background:var(--red)">1–2</div>
         <div class="place-head-content">
           <div class="place-time">11:00–11:30</div>
-          <div class="place-name">Moulin Rouge i Plac Pigalle</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Moulin+Rouge+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Moulin Rouge i Plac Pigalle</a></div>
           <div class="place-cat">Metro: Blanche (linia 2) | Zdjęcia z zewnątrz | Spacer Bulwarem de Clichy</div>
         </div>
       </div>
@@ -1364,7 +1428,7 @@
         <div class="place-num-bar" style="background:var(--gold)">3–4</div>
         <div class="place-head-content">
           <div class="place-time">11:30–12:35</div>
-          <div class="place-name">Montmartre + Winnica + Ściana „Kocham Cię"</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.886370,2.340690/48.884810,2.338350" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Montmartre + Winnica + Ściana „Kocham Cię"</a></div>
           <div class="place-cat">Funiculaire akceptuje bilet metra | Winnica: ul. Saules | Ściana: Skwer Jehan Rictus, stacja Abbesses</div>
         </div>
       </div>
@@ -1382,7 +1446,7 @@
         <div class="place-num-bar" style="background:var(--purple)">5</div>
         <div class="place-head-content">
           <div class="place-time">12:35–13:30</div>
-          <div class="place-name">Bazylika Najświętszego Serca Pańskiego — Sacré-Cœur ⛪</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Sacré-Cœur+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Bazylika Najświętszego Serca Pańskiego — Sacré-Cœur ⛪</a></div>
           <div class="place-cat">Wejście BEZPŁATNE | Msze przez cały dzień | Kopuła: ok. 8 €, 300 schodów, widok 360°</div>
         </div>
       </div>
@@ -1399,7 +1463,7 @@
         <div class="place-num-bar" style="background:var(--gold)">6</div>
         <div class="place-head-content">
           <div class="place-time">13:30–15:00 — Lunch</div>
-          <div class="place-name">Ulica Montorgueil</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Rue+Montorgueil+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ulica Montorgueil</a></div>
           <div class="place-cat">Metro: Les Halles lub Étienne Marcel | 5 min od Pompidou | Brukowana ulica handlowa</div>
         </div>
       </div>
@@ -1416,7 +1480,7 @@
         <div class="place-num-bar" style="background:var(--blue)">7</div>
         <div class="place-head-content">
           <div class="place-time">15:00–17:00</div>
-          <div class="place-name">Centrum Pompidou + Fontanna Strawińskiego</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Centre+Pompidou+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Centrum Pompidou + Fontanna Strawińskiego</a></div>
           <div class="place-cat">Plac i fontanna: bezpłatne | Muzeum: 15 € (bezpłatne do 18 lat!)</div>
         </div>
       </div>
@@ -1474,7 +1538,7 @@
         <div class="place-num-bar" style="background:var(--purple)">1</div>
         <div class="place-head-content">
           <div class="place-time">11:00–12:00</div>
-          <div class="place-name">Katedra Notre-Dame — Zwiedzanie + Targ Kwiatowy</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.852968,2.349902/48.855200,2.347100" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Katedra Notre-Dame — Zwiedzanie + Targ Kwiatowy</a></div>
           <div class="place-cat">Rezerwacja BEZPŁATNA ale wymagana: notredamedeparis.fr | Targ Kwiatowy: bezpłatny, od 1808 r.</div>
         </div>
       </div>
@@ -1492,7 +1556,7 @@
         <div class="place-num-bar" style="background:var(--red)">2</div>
         <div class="place-head-content">
           <div class="place-time">12:00–13:30</div>
-          <div class="place-name">Kaplica Królewska Sainte-Chapelle</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Sainte-Chapelle+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Kaplica Królewska Sainte-Chapelle</a></div>
           <div class="place-cat">BILET ONLINE OBOWIĄZKOWO: sainte-chapelle.fr | ok. 13 € | Czynna do 17:00 — nie zostawiaj na koniec!</div>
         </div>
       </div>
@@ -1510,7 +1574,7 @@
         <div class="place-num-bar" style="background:var(--green)">3–4</div>
         <div class="place-head-content">
           <div class="place-time">13:30–15:30</div>
-          <div class="place-name">Bukinistów + Most Nowy + Ogród Luksemburski</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.856697,2.340841/48.846524,2.337366" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Bukinistów + Most Nowy + Ogród Luksemburski</a></div>
           <div class="place-cat">Bukinistów: bezpłatni, UNESCO 2024 | Most Nowy: 1607 r. | Ogród: bezpłatny, żaglówki na basenie ok. 3 €</div>
         </div>
       </div>
@@ -1572,7 +1636,7 @@
         <div class="place-num-bar" style="background:var(--gold)">0</div>
         <div class="place-head-content">
           <div class="place-time">do 11:00 — po wymeldowaniu</div>
-          <div class="place-name">City-Locker — Zostawienie bagażu 📦</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/82+Rue+des+Gravilliers+75003+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">City-Locker — Zostawienie bagażu 📦</a></div>
           <div class="place-cat">82 Rue des Gravilliers, 75003 Paris | 2 min pieszo od mieszkania | Odbiór wieczorem przed RER</div>
         </div>
       </div>
@@ -1591,7 +1655,7 @@
         <div class="place-num-bar" style="background:var(--green)">1–2</div>
         <div class="place-head-content">
           <div class="place-time">11:00–12:00</div>
-          <div class="place-name">Ogród Pałacu Królewskiego + Fontanna Niewiniątek</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/48.864820,2.336960/48.862820,2.339760" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Ogród Pałacu Królewskiego + Fontanna Niewiniątek</a></div>
           <div class="place-cat">Oba miejsca bezpłatne | Ogród: 2 min od Luwru | Fontanna: Plac des Innocents (5 min spacerem)</div>
         </div>
       </div>
@@ -1608,7 +1672,7 @@
         <div class="place-num-bar" style="background:var(--red)">3</div>
         <div class="place-head-content">
           <div class="place-time">12:00–15:30 | BILET!</div>
-          <div class="place-name">Luwr</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Musée+du+Louvre+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Luwr</a></div>
           <div class="place-cat">BILET ZAREZERWOWANY 12:00 | Wejście od strony metra Palais-Royal (mniej tłumu niż przy Piramidzie!)</div>
         </div>
       </div>
@@ -1626,7 +1690,7 @@
         <div class="place-num-bar" style="background:var(--purple)">4</div>
         <div class="place-head-content">
           <div class="place-time">17:30–19:00 | MSZA 18:00</div>
-          <div class="place-name">Kościół Świętego Eustachego — Wigilia Bożego Ciała ⛪</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Église+Saint-Eustache+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Kościół Świętego Eustachego — Wigilia Bożego Ciała ⛪</a></div>
           <div class="place-cat">2 minuty pieszo od Luwru | Zaułek Świętego Eustachego | saint-eustache.org | Msza 18:00</div>
         </div>
       </div>
@@ -1664,24 +1728,10 @@
 
     <div class="place-card">
       <div class="place-card-head">
-        <div class="place-num-bar" style="background:var(--purple)">0</div>
-        <div class="place-head-content">
-          <div class="place-time">4 czerwca rano</div>
-          <div class="place-name">Msza — Boże Ciało ⛪</div>
-          <div class="place-cat">Parafia Saint-Louis de Chessy lub okoliczne | messes.info → „Chessy 77700"</div>
-        </div>
-      </div>
-      <div class="place-body full">
-        <div class="place-desc">Boże Ciało 2026 wypada 4 czerwca (czwartek). Msza poranna pozwoli zdążyć na otwarcie parku o 10:00. Sprawdź godziny mszy na messes.info przed wyjazdem.</div>
-      </div>
-    </div>
-
-    <div class="place-card">
-      <div class="place-card-head">
         <div class="place-num-bar" style="background:var(--pink)">1</div>
         <div class="place-head-content">
           <div class="place-time">Czwartek 4 czerwca od 10:00</div>
-          <div class="place-name">Disneyland Park — Dzień 1</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Disneyland+Paris" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Disneyland Park — Dzień 1</a></div>
           <div class="place-cat">BILETY WYKUPIONE | Zamek Śpiącej Królewny · Grzmocąca Góra · Piraci z Karaibów · Kraina Fantazji</div>
         </div>
       </div>
@@ -1699,7 +1749,7 @@
         <div class="place-num-bar" style="background:var(--red)">2</div>
         <div class="place-head-content">
           <div class="place-time">Piątek 5 czerwca od 10:00</div>
-          <div class="place-name">Walt Disney Studios — Dzień 2</div>
+          <div class="place-name"><a href="https://www.google.com/maps/search/Walt+Disney+Studios+Park+Chessy" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Walt Disney Studios — Dzień 2</a></div>
           <div class="place-cat">BILETY WYKUPIONE | Kampus Avengers · Ratatouille · Cars | Lub powrót do ulubionych z Dnia 1</div>
         </div>
       </div>
@@ -1739,7 +1789,7 @@
         <div class="place-num-bar" style="background:var(--red)">!</div>
         <div class="place-head-content">
           <div class="place-time">9:00 — Wyjazd | 13:55 — Lot</div>
-          <div class="place-name">Transfer Chessy → Lotnisko Paryż-Orly — Uber XL / Bolt Van</div>
+          <div class="place-name"><a href="https://www.google.com/maps/dir/201+Rue+de+la+Fontaine+Rouge+77700+Chessy/Aéroport+Paris-Orly" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--lgray);">Transfer Chessy → Lotnisko Paryż-Orly — Uber XL / Bolt Van</a></div>
           <div class="place-cat">UWAGA: Orly ≠ CDG — to dwa różne lotniska! | Bądź na Orly do 11:55 | LOT 13:55</div>
         </div>
       </div>
